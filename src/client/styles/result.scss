@@ -1,0 +1,189 @@
+//RESULT
+  
+.result-image {
+    height: 9.8rem;
+    margin: 1rem 0;
+    overflow: hidden;
+    width: 9.8rem;
+  
+    @media only screen and (min-width: 768px) {
+      height: 12.8rem;
+      margin: 0 0 0 2rem;
+      width: 18.8rem;
+    }
+  
+    @media only screen and (min-width: 992px) {
+      height: 14.5rem;
+      margin: 0 0 0 4rem;
+      width: 14.5rem;
+    }
+  
+    img {
+      border-radius: 50%;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  
+  .result-content {
+      align-content: center;
+      align-items: center;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+      display: grid;
+      grid-template-columns: 1rem repeat(2, minmax(min-content, 1fr));
+      grid-template-rows: repeat(5, min-content);
+      grid-gap: 0.4rem;
+      font-family: $font-headings;
+      font-size: 1.0rem;
+      justify-content: center;
+      line-height: 1.32;
+      max-height: 100%;
+      padding: 1rem;
+      width: 100%;
+  
+      @media only screen and (min-width: 576px) {
+        font-size: 1.22rem;
+        width: 90%;
+      }
+  
+      @media only screen and (min-width: 768px) {
+        grid-template-columns: 2rem repeat(2, minmax(min-content, 1fr)) minmax(2rem, auto);
+        grid-template-rows: repeat(5, 1fr);
+        font-size: 1.98vw;
+        padding: 2rem 1rem;
+        width: 65%;
+      }
+  
+      @media only screen and (min-width: 1200px) {
+         padding: 1rem 1rem 1rem 3rem;
+      }
+  
+      .icon-result {
+        justify-self: center;
+        color: $primary-color;
+        grid-column: 1/2;
+        font-size: 1.1rem;
+  
+        @media only screen and (min-width: 576px) {
+          font-size: 1.4rem;
+        }
+  
+        @media only screen and (min-width: 1200px) {
+          font-size: 1.95rem;
+        }
+      }
+  
+      .text-result {
+        grid-column: 2/4;
+        padding: 0.5rem;
+      }
+  
+      .city-icon {
+        grid-row: 1/2;
+      }
+  
+      .city-name {
+        grid-row: 1/2;
+  
+        span {
+          background: $secondary-color;
+          text-transform: capitalize;
+        }
+      }
+  
+      .date-icon {
+        grid-row: 2/3;
+      }
+  
+      .date-name {
+        grid-row: 2/3;
+  
+        span {
+          background: $secondary-color;
+        }
+      }
+  
+      .days-icon {
+        grid-row: 3/4;
+      }
+  
+      .days-name {
+        grid-row: 3/4;
+  
+        span {
+          background: $secondary-color;
+          
+        }
+      }
+  
+      .weather-icon {
+        grid-row: 4/5;
+      }
+  
+      .weather-name {
+        grid-row: 4/5;
+  
+        span {
+          background: $secondary-color;
+        }
+      }
+  
+      .button {
+      border: $color-black 0.2rem solid;
+      border-radius: 4rem;
+      color: $color-dark;
+      display: block;
+      font-family: $font-text;
+      font-size: 0.75rem;
+      opacity: 0.8;
+      padding: 0.5rem 0;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.2s;
+  
+      @media only screen and (min-width: 576px) {
+        padding: 0.5rem 0;
+      }
+  
+      @media only screen and (min-width: 768px) {
+        font-size: 0.78rem;
+        margin-top: 0.51rem;
+        padding: 0.82rem 0;
+      }
+  
+      @media only screen and (min-width: 992px) {
+        margin-top: 1.0rem;
+      }
+      }
+  
+      .button-save {
+        background: rgba(0,0,0,0.3);
+        grid-column: 2/3;
+        grid-row: 5/6;
+        
+      }
+  
+      .button-delete {
+        background:$primary-color;
+        grid-column: 3/4;
+        grid-row: 5/6;
+      }
+    
+  }
+      
+  #save:hover {
+    box-shadow: 0.55rem 0 1rem rgba(0,0,0,.5);
+    opacity: 0.9;
+    transform: translateY(-0.2rem);
+  }
+  #delete:hover {
+    box-shadow: 0.5rem 0 1rem rgba(0,0,0,0.5);
+    opacity: 1;
+    transform: translateY(-0.2rem);
+  }
+  
+  .invisible {
+    display: none;
+  }

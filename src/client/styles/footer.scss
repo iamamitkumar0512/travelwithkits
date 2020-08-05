@@ -1,0 +1,51 @@
+.foot {
+  background-color: $tertiary-color;
+  color: $color-black;
+  min-height: 4.2rem;
+  max-height: 7.2rem;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-text;
+  font-size: 0.5rem;
+  justify-content: center;
+  padding: 1.1rem 0;
+  text-align: center;
+
+  @media only screen and (min-width: 350px) {
+    font-size: 0.5rem;
+  }
+}
+  .foot-copyright {
+    font-family: $font-headings;
+    font-size: 0.72rem;
+    padding-bottom: 0.4rem;
+    a:visited {
+      color: $color-black;
+      display: inline;
+    }
+
+    @media only screen and (min-width: 350px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .footer-credits {
+    color: $fav-color;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.4rem;
+
+    @media only screen and (min-width: 350px) {
+      padding-bottom: 0.5rem;
+    }
+
+    .credits-flaticon {
+      margin: 0.1rem 0;
+      font-size: 0.4rem;
+      a,
+      a:visited {
+        color: $color-black;
+        display: inline;
+      }
+    }
+  }

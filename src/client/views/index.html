@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>KITS travel PLANNER</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header class="head">
+    <nav class="nav-bar">
+      <a href="#about" class="nav-bar-logo">
+        <img src="./images/nav-bar-logo.png" alt="brand logo" class="logo-image">
+      </a>
+      <h2 class="nav-bar-brand-name">KtP</h2>
+      <ul class="nav-bar-menu">
+        <li class="nav-bar-list"><a href="#about">About</a></li>
+        <li class="nav-bar-list"><a href="#planner">Plan trip with kits</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Section About -->
+
+    <section id="about" class="section section-about">
+      <div class="map-wrapper">
+        <div class="about-map">
+          <h1 class="map-heading">KITS travel Planner</h1>
+          <h3 class="map-title">Your ultimate travel planner</h3>
+          <p class="map-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora ad quod consequatur
+            dignissimos quisquam, in doloribus accusantium reiciendis voluptatum alias rem incidunt!</p>
+          <a href="#" class="map-link">+ add your trip</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Planner -->
+
+    <section id="planner" class="section section-planner">
+      <div class="container planner-form">
+        <div class="form-image section-image">
+          <img src="./images/earth.jpg" alt="planet Earth icon">
+        </div>
+        <form class="form-content" id="form">
+          <h2 class="form-heading">Plan trip with kits</h2>
+          <input type="text" class="form-input input-from" name="from" placeholder="Leaving from..."
+            autocomplete="off" required>
+          <input type="text" class="form-input input-to" name="to" placeholder="Going to..." autocomplete="off"
+            required>
+          <label class="date-label" for="date">Departing on...</label>
+          <input type="date" class="form-input input-date" name="date" required>
+          <input type="submit" class="input-submit" name="submit" value="Submit">
+        </form>
+      </div>
+    </section>
+
+    <!-- Section Result -->
+
+    <section id="result" class="section section-result invisible">
+      <div class="container results">
+        <div class="result-image">
+          <img src="../views/images/earth.jpg" alt="destination image" id="result_image">
+        </div>
+        <div class="result-content">
+
+          <i class="city-icon icon-result fas fa-map-pin"></i>
+          <h2 class="city-name text-result">Your destination: <span id="result_city"></span></h2>
+          <i class="date-icon icon-result fas fa-calendar-day"></i>
+          <h2 class="date-name text-result">Departing date: <span id="result_date">DD/MM/YYYY</span></h2>
+
+          <i class="days-icon icon-result fas fa-suitcase-rolling"></i>
+          <h2 class="days-name text-result">Your journey is in <span id="result_days"> NUM </span> days</h2>
+
+          <i class="weather-icon icon-result fas fa-cloud-sun-rain"></i>
+          <h2 class="weather-name text-result">Expected weather : <span id="result_temp">200C</span> &#176; F, <span
+              id="result_summary"></span>.</h2>
+
+          <a class="button button-save" id="save" href="#">Print</a>
+          <a class="button button-delete" id="delete" href="#">Delete</a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+
+  <footer class="foot">
+    <div class="foot-copyright">
+      <p class="copyright-text">All rights reserved ©  2020 AMIT KUMAR</p>
+			<p><a href="https://www.facebook.com/profile.php?id=100036303918297">Facebook</a>
+			<a href="https://twitter.com/Amitkum30519657">Twitter</a>
+			<a href="https://www.instagram.com/i_.am_.amitkumar/">Instagram</a></p>
+    </div>
+    <div class="foot-credits">
+      <div class="credits-flaticon">
+        Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+          href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Service Workers -->
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+  
+</body>
+</html>
